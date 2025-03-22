@@ -1,0 +1,45 @@
+VAR
+    caractère : CHAR;
+    longueur, nb_mots, nb_voyelles : INTEGER;
+    fin_mot : BOOLEAN;
+
+BEGIN
+
+    longueur := 0;
+    nb_mots := 0;
+    nb_voyelles := 0;
+    fin_mot := FALSE;
+  
+   REPEAT
+        
+        Read(caractère);
+        longueur := longueur + 1;
+    
+    IF (caractère IN ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y']) THEN
+            
+            nb_voyelles := nb_voyelles + 1;
+        
+        END_IF;
+
+    IF (caractère <> ' ') AND (caractère <> '.') THEN
+
+            IF NOT fin_mot THEN
+
+                nb_mots := nb_mots + 1;
+
+                fin_mot := TRUE;
+
+            END_IF;
+            
+    ELSE
+        fin_mot := FALSE;
+
+    END_IF;
+
+    UNTIL (caractère = '.');
+
+     WriteLn('Longueur de la phrase : ', longueur);
+    WriteLn('Nombre de mots : ', nb_mots);
+    WriteLn('Nombre de voyelles : ', nb_voyelles);
+
+END
