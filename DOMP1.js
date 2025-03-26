@@ -5,21 +5,21 @@ const items = [
       name: 'Baskets',
       price: 100,
       quantity: 0,
-      image: '/assets/baskets.png'
+      image: 'baskets.png'
   },
   {
       id: 2,
       name: 'Socks',
       price: 20,
       quantity: 0,
-      image: '/assets/socks.png'
+      image: 'socks.png'
   },
   {
       id: 3,
       name: 'Bag',
       price: 50,
       quantity: 0,
-      image: '/assets/bag.png'
+      image: 'bag.png'
   }
 ];
 
